@@ -17,6 +17,9 @@
           {{ end }}
           <div class="post-content markdown">
             <div class="main-content-wrap">
+              {{ with .Params.abstract }}
+                <span class="abstract">{{ . | markdownify }}</span>
+              {{ end }}
               {{ .Content }}
               {{ partial "post/gallery.html" . }}
             </div>
