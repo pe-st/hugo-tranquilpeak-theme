@@ -5,7 +5,7 @@
       {{ if .Site.Params.swapPaginator }}
         <li class="post-action">
           {{ with .PrevInSection }}
-            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" aria-label="{{ i18n "pagination.previous" }}: {{ .Title }}">
+            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" rel="prev" aria-label="{{ i18n "pagination.previous" }}: {{ .Title }}">
           {{ else }}
             <a class="post-action-btn btn btn--disabled">
           {{ end }}
@@ -15,7 +15,7 @@
         </li>
         <li class="post-action">
           {{ with .NextInSection }}
-            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" aria-label="{{ i18n "pagination.next" }}: {{ .Title }}">
+            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" rel="next" aria-label="{{ i18n "pagination.next" }}: {{ .Title }}">
           {{ else }}
             <a class="post-action-btn btn btn--disabled">
           {{ end }}
@@ -26,7 +26,7 @@
       {{ else }}
         <li class="post-action">
           {{ with .NextInSection }}
-            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" aria-label="{{ i18n "pagination.next" }}: {{ .Title }}">
+            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" rel="next" aria-label="{{ i18n "pagination.next" }}: {{ .Title }}">
           {{ else }}
             <a class="post-action-btn btn btn--disabled">
           {{ end }}
@@ -36,7 +36,7 @@
         </li>
         <li class="post-action">
           {{ with .PrevInSection }}
-            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" aria-label="{{ i18n "pagination.previous" }}: {{ .Title }}">
+            <a class="post-action-btn btn btn--default tooltip--top" href="{{ .RelPermalink }}" data-tooltip="{{ .Title }}" rel="prev" aria-label="{{ i18n "pagination.previous" }}: {{ .Title }}">
           {{ else }}
             <a class="post-action-btn btn btn--disabled">
           {{ end }}
