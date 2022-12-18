@@ -54,8 +54,12 @@
     <div class="postShorten-excerpt">
       {{ if .Params.Summary }}
         {{ .Params.Summary | markdownify }}
+        <br><a href="{{ .RelPermalink }}">Read More ...</a>
       {{ else }}
         {{ .Summary }}
+        {{ if .Truncated }}
+          <a href="{{ .RelPermalink }}">Read More ...</a>
+        {{ end }}
       {{ end }}
       <p>
         {{ with .Params.link }}
