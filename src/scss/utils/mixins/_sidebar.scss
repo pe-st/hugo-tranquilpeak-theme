@@ -20,6 +20,12 @@
         .sidebar-profile-name {
             display: none;
         }
+        .sidebar-profile-title {
+            display: none;
+        }
+        .sidebar-profile-subtitle {
+            display: none;
+        }
     }
     // Buttons
     ul.sidebar-buttons {
@@ -71,6 +77,12 @@
         }
         .sidebar-profile-name {
             font-size: 1.6rem;
+        }
+        .sidebar-profile-title {
+            font-size: 1.6rem;
+        }
+        .sidebar-profile-subtitle {
+            font-size: 1.4rem;
         }
     }
     // Buttons

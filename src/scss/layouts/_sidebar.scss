@@ -32,6 +32,15 @@
             font-size: 1.1em;
             color:     map-get($sidebar, color);
         }
+        .sidebar-profile-title {
+            font-size: 1.1em;
+            color:     map-get($sidebar, color);
+        }
+        .sidebar-profile-subtitle {
+            font-size:  0.9em;
+            font-style: italic;
+            color:      map-get($sidebar, color);
+        }
     }
     // Sidebar's buttons
     ul.sidebar-buttons {
