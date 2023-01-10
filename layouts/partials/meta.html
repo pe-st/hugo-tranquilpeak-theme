@@ -58,7 +58,10 @@
   {{ end }}
 {{ end }}
 
-{{ if .Scratch.Get "gravatarEmail" }}
+{{ if .Site.Params.siteImage }}
+  <meta property="og:image" content="{{ .Site.Params.siteImage | absURL }}">
+  <meta property="twitter:image" content="{{ .Site.Params.siteImage | absURL }}">
+{{ else if .Scratch.Get "gravatarEmail" }}
   <meta property="og:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/{{ (md5 (.Scratch.Get "gravatarEmail")) | urlize }}?s=640">
 {{ else if .Site.Author.picture }}
