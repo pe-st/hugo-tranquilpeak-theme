@@ -19,7 +19,7 @@
               data-message-other="{{ i18n "global.tags_found.other" }}"></h4>
 
             <section>
-              {{ range .Data.Terms.ByCount }}
+              {{ range .Data.Terms.Alphabetical }}
                 <a class="tag tag--primary tag--small" href="#{{ .Name | urlize }}-list" data-tag="{{ .Name | lower }}">
                   {{ .Name }}
                 </a>

@@ -65,7 +65,7 @@
                 </div>
               {{ end }}
             {{ else }}
-              {{ range .Data.Terms.ByCount }}
+              {{ range .Data.Terms.Alphabetical }}
                 <div>
                   <a href="#posts-list-{{ .Name | urlize }}" class="category-anchor" data-category="{{ .Name }}">{{ .Name }}</a>
                 </div>
