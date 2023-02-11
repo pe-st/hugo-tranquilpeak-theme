@@ -10,3 +10,5 @@ static/js/*
 static/css/*
 !static/css/style-*.min.css
 
+.hugo_build.lock
+
