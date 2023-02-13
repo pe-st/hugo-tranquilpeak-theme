@@ -12,48 +12,18 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "https://pe-st.github.io/hugo-tranquilpeak-theme/"
+# Note that some configuration is overwritten in config/_default/config.toml
+
+baseURL = "https://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Pesche's Hugo tranquilpeak theme"
-#theme = "tranquilpeak"
+title = "Hugo tranquilpeak theme"
+# uncomment this when you copy the example site somewhere else
+# theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
-
-# mount the theme from the parent directory as module
-[module]
-[[module.mounts]]
-  source = 'content'
-  target = 'content'
-[[module.mounts]]
-  source = 'static'
-  target = 'static'
-[[module.mounts]]
-  source = '../static'
-  target = 'static'
-[[module.mounts]]
-  source = 'layouts'
-  target = 'layouts'
-[[module.mounts]]
-  source = '../layouts'
-  target = 'layouts'
-[[module.mounts]]
-  source = 'data'
-  target = 'data'
-[[module.mounts]]
-  source = 'assets'
-  target = 'assets'
-[[module.mounts]]
-  source = 'i18n'
-  target = 'i18n'
-[[module.mounts]]
-  source = '../i18n'
-  target = 'i18n'
-[[module.mounts]]
-  source = 'archetypes'
-  target = 'archetypes'
 
 [permalinks]
   posts = "/:year/:month/:slug/"
@@ -381,7 +351,7 @@ canonifyurls = true
   # --------------
   [params.comment]
     [params.comment.disqus]
-      enable = true
+      enable = false
       shortname = "hugo-tranquilpeak-theme"
     [params.comment.gitalk]
       enable = false

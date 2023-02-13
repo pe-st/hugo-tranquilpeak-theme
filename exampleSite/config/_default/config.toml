@@ -1,0 +1,47 @@
+# override the example config from the root config.toml
+# to use the 'exampleSite' directly to serve as site
+#
+# You probably want to remove this file when you use the exampleSite
+# as template for a site
+
+title = "Pesche's Hugo tranquilpeak theme"
+
+# mount the theme from the parent directory as module
+[module]
+[[module.mounts]]
+  source = 'content'
+  target = 'content'
+[[module.mounts]]
+  source = 'static'
+  target = 'static'
+[[module.mounts]]
+  source = '../static'
+  target = 'static'
+[[module.mounts]]
+  source = 'layouts'
+  target = 'layouts'
+[[module.mounts]]
+  source = '../layouts'
+  target = 'layouts'
+[[module.mounts]]
+  source = 'data'
+  target = 'data'
+[[module.mounts]]
+  source = 'assets'
+  target = 'assets'
+[[module.mounts]]
+  source = 'i18n'
+  target = 'i18n'
+[[module.mounts]]
+  source = '../i18n'
+  target = 'i18n'
+[[module.mounts]]
+  source = 'archetypes'
+  target = 'archetypes'
+
+
+[params]
+  [params.comment]
+    [params.comment.cactus]
+      enable = true
+      siteName = "pesche.tranquilpeak"

@@ -1,0 +1,74 @@
+{{ if .Params.commentslug }}
+  <script type="text/javascript" src="{{ "/js/cactus-0.13.0.js" | absURL }}"></script>
+  <link rel="stylesheet" href="{{ "css/cactus-0.13.0.css" | absURL }}" type="text/css">
+  <!-- use the same styles for the comments as for the post content above -->
+  <div class="post-content markdown">
+    <div id="cactus">
+      <noscript>Please enable JavaScript to view the comments powered by Cactus.</noscript>
+      <script>
+          initComments({
+              node: document.getElementById("cactus"),
+              defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+              serverName: "cactus.chat",
+              siteName: "{{ .Site.Params.comment.cactus.siteName }}",
+              commentSectionId: "{{ .Params.commentslug }}"
+          })
+      </script>
+    </div>
+  </div>
+{{ else if .Params.comments }}
+  {{ $numberOfComments := len .Params.comments }}
+  {{ if gt $numberOfComments 0 }}
+    <link rel="stylesheet" href="{{ "css/cactus-0.13.0.css" | absURL }}" type="text/css">
+    <div class="cactus-container post-content markdown">
+      <div class="cactus-comments-container">
+        <div class="cactus-comments-list">
+          <div class="cactus-comment">
+            <div class="cactus-comment-content">
+              <div class="cactus-comment-header">
+                <div class="cactus-comment-displayname">(Comments are closed)</div>
+              </div>
+            </div>
+          </div>
+          {{ range $comment := .Params.comments }}
+
+            <div class="cactus-comment">
+              <div class="cactus-comment-avatar">
+                <div class="cactus-comment-avatar-placeholder"></div>
+              </div>
+              <div class="cactus-comment-content">
+                <div class="cactus-comment-header">
+                  {{/* assuming $comment.name is always set */}}
+                  {{ $obfuscatedMail := "" }}
+                  {{ with $comment.mail }}
+                    {{ $obfuscatedMail = replace . "@" "@REMOVE." }}
+                  {{ end }}
+                  {{ with $comment.site }}
+                    <a class="cactus-comment-displayname" href="{{ $comment.site }}"{{ with $obfuscatedMail }} title="{{ . }}"{{ end }}>{{ $comment.name }}</a>
+                  {{ else }}
+                    <div class="cactus-comment-displayname"{{ with $obfuscatedMail }} title="{{ . }}"{{ end }}>{{ $comment.name }}</div>
+                  {{ end }}
+                  {{ with $comment.time }} <!-- with $comment.time -->
+                    <time class="cactus-comment-time" title="{{ dateFormat "2006-01-02 15:04" . }}" datetime="{{ . }}">
+                      {{ if $.Site.Params.dateFormat }}
+                        {{ dateFormat $.Site.Params.dateFormat . }}
+                      {{ else }}
+                        {{ dateFormat "2006-01-02 15:04" . }}
+                      {{ end }}
+                    </time>
+                  {{ end }}
+                </div>
+                <div class="cactus-comment-body">
+                  <div class="cactus-message-text">
+                    <p>{{ $comment.text | markdownify }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

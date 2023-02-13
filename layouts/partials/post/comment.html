@@ -47,5 +47,7 @@
         }).render('gitalk')
       })()
     </script>
+  {{ else if .Site.Params.comment.cactus.enable }}
+    {{ partial "post/cactus.html" . }}
   {{ end }}
 {{ end }}
