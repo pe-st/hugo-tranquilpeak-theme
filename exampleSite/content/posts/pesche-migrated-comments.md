@@ -1,5 +1,5 @@
 ---
-title: 'Article with Migrated Comments'
+title: 'Migrating Comments from a Different Blog Platform'
 date: 2023-02-13T17:00:00+01:00
 draft: false
 categories:
@@ -65,7 +65,17 @@ you can add them as list in the front matter:
   text: (comment itself, can contain Markdown)
 ```
 
-Look at the [source of this post](https://github.com/pe-st/hugo-tranquilpeak-theme/blob/pesche/exampleSite/content/posts/pesche-migrated-comments.md) to see some more examples of comments.
+Look at the [source of this post](https://github.com/pe-st/hugo-tranquilpeak-theme/blob/pesche/exampleSite/content/posts/pesche-migrated-comments.md?plain=1) to see some more examples of comments.
 They should be rendered below, using the same style as new comments entered
 using cactus comments.
 
+Prerequisites: you must enable Cactus Comments (see also the
+[Post about integrating Cactus](/2023/02/using-cactus-comments/)),
+as the migrated comments use the Cactus styles.
+
+```
+[params]
+  [params.comment]
+    [params.comment.cactus]
+      enable = true
+```

@@ -4,7 +4,7 @@
 # You probably want to remove this file when you use the exampleSite
 # as template for a site
 
-title = "Pesche's Hugo tranquilpeak theme"
+title = "Pesche's Hugo Tranquilpeak Theme"
 
 # mount the theme from the parent directory as module
 [module]
