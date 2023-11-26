@@ -29,7 +29,7 @@ How can I migrate my current version? Please read [CHANGELOG.md](https://github.
 
 - **Authors**: [Thibaud Leprêtre (kakawait)](https://github.com/kakawait) and [Louis Barranqueiro (LouisBarranqueiro)](https://github.com/LouisBarranqueiro)
 - **Version**: 0.5.3-BETA (based on Hexo version 3.1.0)
-- **Compatibility**: Hugo v0.53
+- **Compatibility**: Hugo v0.110
 
 ## Features
 
@@ -91,7 +91,7 @@ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git
 
 After installing the Tranquilpeak theme successfully, we recommend you to take a look at the [exampleSite](exampleSite) directory. You will find a working Hugo site configured with the Tranquilpeak theme that you can use as a starting point for your site.
 
-First, let's take a look at the [config.toml](exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
+First, let's take a look at the [hugo.toml](exampleSite/hugo.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
 
 More information on [user documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md) to install and configure the theme
 

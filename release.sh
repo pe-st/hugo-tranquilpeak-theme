@@ -35,8 +35,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # first blog post
   sed -i 's/\(title: "[^"]*'"\)${current_version}"'/\1'"${new_version}"'/' exampleSite/content/posts/Welcome-to-the-new-Tranquilpeak.md
   sed -i 's/\(- \*\*Version\*\*: \)'"${current_version}"'/\1'"${new_version}"'/' exampleSite/content/posts/Welcome-to-the-new-Tranquilpeak.md
-  # config.toml
-  sed -i 's/\([#] Version : \)'"${current_version}"'/\1'"${new_version}"'/' exampleSite/config.toml
+  # hugo.toml
+  sed -i 's/\([#] Version : \)'"${current_version}"'/\1'"${new_version}"'/' exampleSite/hugo.toml
   # user.md
   sed -i 's/\(- \*\*Version\*\*: \)'"${current_version}"'/\1'"${new_version}"'/' docs/user.md
   # developer.md

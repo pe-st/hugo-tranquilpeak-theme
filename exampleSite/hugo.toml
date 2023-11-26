@@ -12,7 +12,7 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-# Note that some configuration is overwritten in config/_default/config.toml
+# Note that some configuration is overwritten in config/_default/hugo.toml
 
 baseURL = "https://example.org/"
 languageCode = "en-us"

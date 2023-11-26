@@ -212,10 +212,10 @@ cp config.{toml,yml,json} config.{toml,yml,json}.backup
 Copy example configuration
 
 ```bash
-cp themes/tranquilpeak/exampleSite/config.toml .
+cp themes/tranquilpeak/exampleSite/hugo.toml .
 ```
 
-Complete `config.toml` with your information. Read above sections to have more information.
+Complete `hugo.toml` with your information. Read above sections to have more information.
 
 #### Sidebar
 
@@ -336,7 +336,7 @@ E.g to display a shortcut to open algolia search window :
 
 #### Customization
 
-**ATTENTION** not all customizations are documented here, you may checkout [sample config.toml](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/exampleSite/config.toml).
+**ATTENTION** not all customizations are documented here, you may checkout [sample hugo.toml](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/exampleSite/hugo.toml).
 
 ```toml
 [params]
@@ -557,7 +557,7 @@ You can configure how links to your site will appear in Twitter and/or Facebook.
 
 * **Title**: if in a page with title (like a post) it will use post title, otherwise, will use site title.
 * **Description**: will use article summary, if it does not exist, will use site description.
-* **Site author** (twitter only): will use the value of `twitter` field on ``[[params.Author]]`` section of your `config.toml` file.
+* **Site author** (twitter only): will use the value of `twitter` field on ``[[params.Author]]`` section of your `hugo.toml` file.
 * **Content author** (twitter only): will use the value of the field `twitter` in your document header. If not specified, will use the **Site author** field value.
 * **Image**: will use the following fields in order, if one is not available, the next will be taken: thumbnail of document, cover of document, gallery images, gravatar email then author picture, .
 
@@ -675,7 +675,7 @@ syntgax:
 {{< toc >}}
 ```
 
-However you may have to update your hugo `config.toml` configuration to be sure that `startLevel` is matching your content. By default (see [official documentation](https://gohugo.io/getting-started/configuration-markup/#table-of-contents)) Hugo detects table of content starting level 2, that mean `<h2>my title</h2>` or `## my title`.
+However you may have to update your hugo `hugo.toml` configuration to be sure that `startLevel` is matching your content. By default (see [official documentation](https://gohugo.io/getting-started/configuration-markup/#table-of-contents)) Hugo detects table of content starting level 2, that mean `<h2>my title</h2>` or `## my title`.
 
 If you used to write `# my title` and so transformed to `<h1>my title</h1>`, the table of content will be empty by default if you're not updating `startLevel` to `startLevel = 1`
 

@@ -42,7 +42,7 @@ If you want to report a bug or ask a question, [create an issue](https://github.
 
 1. Run `git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git`
 2. Rename the local folder from `hugo-tranquilpeak-theme` to `tranquilpeak` and place it in `themes` folder of your Hexo blog
-3. Modify the hugo config in `config.toml` by changing `theme` variable  to `tranquilpeak`
+3. Modify the hugo config in `hugo.toml` by changing `theme` variable  to `tranquilpeak`
 4. Go in `theme/tranquilpeak` folder with `cd themes/tranquilpeak`
 5. Install [requirements](#requirements)
 6. Run `npm install` to install [NPM dependencies](#npm-dependencies)
