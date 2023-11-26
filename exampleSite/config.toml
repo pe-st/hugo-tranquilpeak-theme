@@ -43,24 +43,6 @@ canonifyurls = true
     ordered = false
     startLevel = 1
 
-# ------
-# Author
-# ------
-[author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
-  location = "France"
-  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  # gravatarEmail = "thibaud.lepretre@gmail.com"
-  # Your profile picture
-  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
-  # Your Twitter username without the @. E.g : thibaudlepretre
-  # twitter = "thibaudlepretre"
-  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
-  # googlePlus = "+ThibaudLepretre"
-
 # ------------
 # Sidebar menu
 # ------------
@@ -119,6 +101,23 @@ canonifyurls = true
 # Customization
 # -------------
 [params]
+  # ------
+  # Author
+  # ------
+  author.name = "Firstname Lastname"
+  author.bio = "Super bio with markdown support **COOL**"
+  author.job = "Your job title"
+  author.location = "France"
+  # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+  # author.gravatarEmail = "thibaud.lepretre@gmail.com"
+  # Your profile picture
+  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+  author.picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  # Your Twitter username without the @. E.g : thibaudlepretre
+  # author.twitter = "thibaudlepretre"
+  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
+  # author.googlePlus = "+ThibaudLepretre"
+
   # -----------
   # Description
   # -----------

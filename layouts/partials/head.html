@@ -10,16 +10,16 @@
   {{- .Scratch.Set "sidebarBehavior" .Site.Params.sidebarBehavior -}}
 {{- end -}}
 <!-- Fix hugo 0.17 expects ".Site.Author.gravatarEmail" whereas hugo 0.18 expects ".Site.Author.gravataremail" -->
-{{- if .Site.Author.gravatarEmail -}}
-  {{- .Scratch.Set "gravatarEmail" .Site.Author.gravatarEmail -}}
+{{- if .Site.Params.Author.gravatarEmail -}}
+  {{- .Scratch.Set "gravatarEmail" .Site.Params.Author.gravatarEmail -}}
 {{- end -}}
-{{- if .Site.Author.gravataremail -}}
-  {{- .Scratch.Set "gravatarEmail" .Site.Author.gravataremail -}}
+{{- if .Site.Params.Author.gravataremail -}}
+  {{- .Scratch.Set "gravatarEmail" .Site.Params.Author.gravataremail -}}
 {{- end -}}
 {{- if .Scratch.Get "gravatarEmail" -}}
   {{- .Scratch.Set "authorPicture" (printf "https://www.gravatar.com/avatar/%s" (urlize (md5 (.Scratch.Get "gravatarEmail")))) -}}
-{{- else if .Site.Author.picture -}}
-  {{- .Scratch.Set "authorPicture" (absURL .Site.Author.picture) -}}
+{{- else if .Site.Params.Author.picture -}}
+  {{- .Scratch.Set "authorPicture" (absURL .Site.Params.Author.picture) -}}
 {{- end -}}
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
@@ -34,7 +34,7 @@
       <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ .RelPermalink }}">
     {{ end }}
 
-    {{ with .Site.Author.googleplus }}
+    {{ with .Site.Params.Author.googleplus }}
       <link rel="publisher" href="https://plus.google.com/{{ . | urlize }}">
     {{ end }}
 
