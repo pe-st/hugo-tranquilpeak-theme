@@ -58,10 +58,6 @@
       {{ end }}
     {{ end }}
 
-    {{ if or .Params.googleAnalytics.async .Params.ga.async }}
-      {{ template "_internal/google_analytics_async.html" . }}
-    {{ else }}
-      {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
+    {{ template "_internal/google_analytics.html" . }}
     {{ partial "head_end.html" . }}
   </head>
