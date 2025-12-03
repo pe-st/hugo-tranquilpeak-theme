@@ -75,6 +75,15 @@
       </a>
     </li>
   {{ end }}
+  {{ if .IsTranslated }}
+    {{ range .Translations }}
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="{{ .RelPermalink }}" aria-label="{{ .Language.Lang }}">
+        {{ .Language.Lang }}
+      </a>
+    </li>
+    {{ end }}
+  {{ end }}
   <li class="post-action">
     {{ if findRE "<!--\\s*[t|T][o|O][c|C]\\s*-->" .Content }}
       <a class="post-action-btn btn btn--default" href="#table-of-contents" aria-label="{{ i18n "post.toc" }}">
