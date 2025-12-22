@@ -22,8 +22,10 @@ title = "Hugo tranquilpeak theme"
 # theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
-paginate = 7
 canonifyurls = true
+
+[pagination]
+  pagerSize = 7
 
 [permalinks]
   posts = "/:year/:month/:slug/"
