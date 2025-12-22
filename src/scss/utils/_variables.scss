@@ -84,7 +84,8 @@ $screen-min: (
     'sm-min': 480px,
      // If you change value of `md-min`,
      // you have to change value of `mediumScreenWidth` too in `source/_js/sidebar.js`
-    'md-min': 768px,
+    'md-min': 1024px,
+    // use the same value for md-min and lg-min to avoid the 'md' layout (sidebar only icons=not accessible)
     'lg-min': 1024px,
     'xlg-min': 1280px
 );

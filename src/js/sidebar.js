@@ -26,7 +26,7 @@
     // you have to change value of `$screen-min: (md-min)` too
     // in `source/_css/utils/variables.scss`
     this.$body = $('body');
-    this.mediumScreenWidth = 768;
+    this.mediumScreenWidth = 1024;
   };
 
   Sidebar.prototype = {
