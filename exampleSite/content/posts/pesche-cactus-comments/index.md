@@ -29,7 +29,7 @@ Note that you don't need the shortcode mentioned for the
 [Hugo Integration](https://cactus.chat/docs/integrations/hugo/) when Cactus is integrated in the theme.
 
 For the curious: the source of the Cactus integration in the theme is in
-[cactus.html](https://github.com/pe-st/hugo-tranquilpeak-theme/blob/pesche/layouts/partials/post/cactus.html), which is called from [comments.html](https://github.com/pe-st/hugo-tranquilpeak-theme/blob/pesche/layouts/partials/post/comments.html) when Cactus is enabled in the site configuration.
+[cactus.html](https://github.com/pe-st/hugo-tranquilpeak-theme/blob/pesche/layouts/_partials/post/cactus.html), which is called from [comments.html](https://github.com/pe-st/hugo-tranquilpeak-theme/blob/pesche/layouts/_partials/post/comments.html) when Cactus is enabled in the site configuration.
 
 The difference between using a shortcode and integration within the theme:
 

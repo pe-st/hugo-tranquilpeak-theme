@@ -83,7 +83,7 @@ If you want to add a new language, duplicate an existing language file and repla
 
 ```
 ├── layout
-    ├── partials
+    ├── _partials
     │   ├── post
     │   ...
     ...
@@ -181,14 +181,14 @@ Use `npm run <script_name>` to run one of these scripts. E.g : `npm run start`
 ### Pipeline
 
 ``` javascript
-// Js files to inject in `layout/partials/script.html`
+// Js files to inject in `layout/_partials/script.html`
 var tranquilpeakJsFilesToInject = [
     'jquery.js',
     'jquery.fancybox.js',
     'jquery.fancybox-thumbs.js',
     'tranquilpeak.js'
 ];
-// Css files to inject in `layout/partials/head.html`
+// Css files to inject in `layout/_partials/head.html`
 var tranquilpeakCssFilesToInject = [
     'font-awesome.css',
     'jquery.fancybox.css',
@@ -198,8 +198,8 @@ var tranquilpeakCssFilesToInject = [
 ```
 |Variable|Description|
 |---|---|
-|tranquilpeakJsFilesToInject|Files injected in `layout/partials/script.html` (development environment)|
-|tranquilpeakCssFilesToInject|Files injected in`layout/partials/head.html` (development environment)|
+|tranquilpeakJsFilesToInject|Files injected in `layout/_partials/script.html` (development environment)|
+|tranquilpeakCssFilesToInject|Files injected in`layout/_partials/head.html` (development environment)|
 
 On production environment, these javascript and stylesheets files are concatenate and minify in 1 javascript file and 1 stylesheet file and linked to their respective views
 
@@ -211,7 +211,7 @@ On production environment, these javascript and stylesheets files are concatenat
 |concat|<ul><li>devJs : Concat all javascript files located in `src/js/` into 1 file : `src/assets/js/tranquilpeak.js`</li><li>prodCss : Concat all stylesheets files located in `src/assets/css/` into 1 file : `src/assets/css/style.css`</li><li>prodJs : Concat all javascript listed in `tasks/pipeline.js` in 1 file : `src/assets/js/script.js`</li></ul>|
 |cssmin|Minify `src/assets/cssstyle.css` file in : `src/assets/cssstyle.min.css`|
 |exec|<ul><li>eslint : run `eslint .`</li></ul>|
-|sails-linker|<ul><li>devJs : Link all javascript files listed in `tasks/pipeline.js`  to `layout/partials/script.html`</li><li>devCss : Link all stylesheets files listed in `tasks/pipeline.js`  to `layout/partials/head.html`</li><li>prodJs : Link `src/assets/js/script.min.js` file in `layout/partials/script.html`</li><li>prodCss : Link `src/assets/js/style.min.css` file in `layout/partials/head.html`</li></ul>|
+|sails-linker|<ul><li>devJs : Link all javascript files listed in `tasks/pipeline.js`  to `layout/_partials/script.html`</li><li>devCss : Link all stylesheets files listed in `tasks/pipeline.js`  to `layout/_partials/head.html`</li><li>prodJs : Link `src/assets/js/script.min.js` file in `layout/_partials/script.html`</li><li>prodCss : Link `src/assets/js/style.min.css` file in `layout/_partials/head.html`</li></ul>|
 |sass|Compile `src/scss/tranquilpeak.scss` file in `src/assets/css/tranquilpeak.css`|
 |sync|Synchronize images from `src/images` to `src/assets/images` and fonts from `src/fonts` to `src/assets/fonts`|
 |watch|Watch assets from `src/*/**/*` folder to detect changes and launch `syncAssets` task|

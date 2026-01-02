@@ -31,7 +31,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # package-lock.json
   npm i
   # meta.html
-  sed -i 's/\(generator" content="[^"]*\)'"${current_version}"'/\1'"${new_version}"'/' layouts/partials/meta.html
+  sed -i 's/\(generator" content="[^"]*\)'"${current_version}"'/\1'"${new_version}"'/' layouts/_partials/meta.html
   # first blog post
   sed -i 's/\(title: "[^"]*'"\)${current_version}"'/\1'"${new_version}"'/' exampleSite/content/posts/Welcome-to-the-new-Tranquilpeak.md
   sed -i 's/\(- \*\*Version\*\*: \)'"${current_version}"'/\1'"${new_version}"'/' exampleSite/content/posts/Welcome-to-the-new-Tranquilpeak.md

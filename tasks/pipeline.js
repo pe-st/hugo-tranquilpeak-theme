@@ -1,9 +1,9 @@
-// Js files to inject in `layouts/partials/script.html`
+// Js files to inject in `layouts/_partials/script.html`
 var tranquilpeakJsFilesToInject = [
   'tranquilpeak.js'
 ];
 
-// Css files to inject in `layouts/partials/head.html`
+// Css files to inject in `layouts/_partials/head.html`
 var tranquilpeakCssFilesToInject = [
   'tranquilpeak.css'
 ];
