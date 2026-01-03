@@ -1,0 +1,13 @@
+<!-- compare to post/header.html -->
+{{ with ($.Scratch.Get "authorPicture") }}
+  <div class="tree-bio main-content-wrap text-center">
+    <img class="tree-bio-picture" src="{{ . }}{{ if in . "//www.gravatar.com/avatar/" }}?s=110{{ end }}" alt="{{ i18n "global.author_picture" }}" />
+    <h1 class="tree-bio-name">{{ $.Site.Params.Author.name }}</h1>
+    <!--
+    <p class="tree-bio-title">{{ $.Site.Title }}</p>
+    {{ with $.Site.Params.subtitle }}
+      <p class="tree-bio-subtitle">{{ . | markdownify }}</p>
+    {{ end }}
+    -->
+  </div>
+{{ end }}

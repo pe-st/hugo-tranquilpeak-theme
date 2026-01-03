@@ -1,0 +1,73 @@
+#tree {
+    display:        block;
+    text-align:     center;
+    width:          parent;
+
+    .tree-bio {
+        padding-top:    40px;
+        padding-bottom: 7.5px;
+        margin-bottom:  20px;
+
+        .tree-bio-picture {
+            display:       block;
+            margin:        0 auto;
+            width:         90px;
+            height:        90px;
+            border-radius: 90px;
+            margin-bottom: 5px;
+        }
+        .tree-bio-name {
+            margin-bottom: 0px;
+        }
+        .tree-bio-title {
+            font-size: 1.1em;
+        }
+        .tree-bio-subtitle {
+            font-size:  0.9em;
+            font-style: italic;
+        }
+    }
+
+    .tree-leaves {
+
+        .tree-leaves-single {
+            text-align:     center;
+            padding:        4px;
+        }
+
+        .tree-leaves-link {
+            display:        inline-block;
+            width:          90%;
+            height:         auto;
+            border-radius:  3px;
+            letter-spacing: $letter-spacing-base;
+            cursor:         pointer;
+            margin:         5px;
+            padding-top:    15px;
+            padding-bottom: 15px;
+
+            // use the same colors as with tags (see .tag--primary)
+            @include tag-color-variant(map-get($colors, primary));
+        }
+
+        .tree-leaves-title {
+            color: $font-color-base;
+            font-size: 1.1em;
+            margin: 0;
+            border: none;
+        }
+
+        // Font-awesome icon
+        .tree-leaves-icon {
+            font-size:      2rem;
+            font-weight:    600;
+            display:        inline-block;
+            text-align:     center;
+            width:          30px;
+            height:         30px;
+            line-height:    30px;
+            padding-top:    0;
+            vertical-align: middle;
+        }
+    }
+}

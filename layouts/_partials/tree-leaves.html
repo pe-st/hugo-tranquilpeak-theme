@@ -1,0 +1,22 @@
+<div class="post-content">
+  <div class="main-content-wrap">
+    <table class="tree-leaves">
+      <tbody>
+
+          {{ range .Params.tree }}
+          <tr>
+            <td class="tree-leaves-single">
+              <a class="tree-leaves-link" href="{{ .url | safeURL }}" target="_blank" rel="noopener">
+                  {{ with .icon }}
+                    <i class="tree-leaves-icon {{ . }}" aria-hidden="true"></i>
+                  {{ end }}
+                  <span class="tree-leaves-title">{{ .title }}</span>
+              </a>
+            </td>
+          </tr>
+        {{ end }}
+
+      </tbody>
+    </table>
+  </div>
+</div>
