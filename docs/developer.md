@@ -30,8 +30,8 @@ If you want to report a bug or ask a question, [create an issue](https://github.
 ## General ##
 
 - **Author**: Thibaud Leprêtre
-- **Version**: 0.5.3-BETA (based on Hexo version 3.1.0)
-- **Compatibility**: Hugo v0.53
+- **Version**: 0.6.0-BETA (based on Hexo version 3.1.0)
+- **Compatibility**: Hugo v0.146
 
 ## Requirements ##
 

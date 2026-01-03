@@ -28,8 +28,8 @@ How can I migrate my current version? Please read [CHANGELOG.md](https://github.
 ## General
 
 - **Authors**: [Thibaud Leprêtre (kakawait)](https://github.com/kakawait) and [Louis Barranqueiro (LouisBarranqueiro)](https://github.com/LouisBarranqueiro)
-- **Version**: 0.5.3-BETA (based on Hexo version 3.1.0)
-- **Compatibility**: Hugo v0.110
+- **Version**: 0.6.0-BETA (based on Hexo version 3.1.0)
+- **Compatibility**: Hugo v0.146
 
 ## Features
 
@@ -143,4 +143,3 @@ Read [guidelines for contributing](https://github.com/kakawait/hugo-tranquilpeak
 ## License
 
 hugo-tranquilpeak-theme is released under the terms of the [GNU General Public License v3.0](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/LICENSE).
-

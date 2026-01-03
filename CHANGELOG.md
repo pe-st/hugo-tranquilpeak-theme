@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.6.0-BETA - 03 jan 2026
+
+- Refactor to the new Hugo [Template System](https://gohugo.io/templates/new-templatesystem-overview/).
+  Note: `categories`/`tags` taxonomies not refactored, the new structure somehow doesn't work with
+  the recursive taxonomies (or maybe I just missed something)
+
 ## [0.5.3-BETA](https://github.com/kakawait/hugo-tranquilpeak-theme/milestone/27) - 06 oct 2021
 
 - Fix top/bottom bar behavior when scrolling ([#520](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/520))
